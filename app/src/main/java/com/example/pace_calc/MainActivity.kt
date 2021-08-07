@@ -1,6 +1,8 @@
 package com.example.pace_calc
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val enterDistance: EditText = findViewById(R.id.editDistance);
-
         enterDistance.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 try {
@@ -28,11 +29,16 @@ class MainActivity : AppCompatActivity() {
 
         val editPace: EditText = findViewById(R.id.editPaceTime);
 
-        editPace.setOnEditorActionListener { v, actionId, event ->
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
-                val text = v.text.toString()
-                val hoursMinutesSeconds = text.split(":");
+        editPace.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {}
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                setupPaceEntered();
+            }
 
+            fun setupPaceEntered() {
+                val text = editPace.text.toString();
+                val hoursMinutesSeconds = text.split(":");
                 try {
                     val minutes = Integer.parseInt(hoursMinutesSeconds[0]);
                     val seconds = Integer.parseInt(hoursMinutesSeconds[1]);
@@ -41,8 +47,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this@MainActivity, "Must be a valid time in format hh:mm:ss", Toast.LENGTH_SHORT).show()
                 }
             }
-            false
-        }
+        })
 
         val calculateButton: Button = findViewById(R.id.calculate);
 
