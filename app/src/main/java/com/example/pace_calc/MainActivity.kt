@@ -9,10 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        var pace = Pace(8, 10);
+        var pace = Pace(8, 10)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.calculate_time)
 
         val enterDistance: EditText = findViewById(R.id.editDistance);
         enterDistance.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
