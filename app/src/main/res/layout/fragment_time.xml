@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".fragments.TimeFragment">
 
     <TextView
         android:id="@+id/paceTextView"
@@ -14,8 +13,7 @@
         android:layout_marginBottom="324dp"
         android:text="Pace "
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+      />
 
     <TextView
         android:id="@+id/distanceTextView"
@@ -23,10 +21,9 @@
         android:layout_height="37dp"
         android:layout_marginStart="52dp"
         android:layout_marginBottom="380dp"
-        android:text="Distance "
+        android:text="Distance"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+      />
 
     <EditText
         android:id="@+id/editDistance"
@@ -36,9 +33,8 @@
         android:layout_marginBottom="380dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/distanceTextView" />
+
+         />
 
     <EditText
         android:id="@+id/editPaceTime"
@@ -49,8 +45,6 @@
         android:ems="10"
         android:inputType="time"
         android:text="08:10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         tools:text="08:10" />
 
     <Button
@@ -60,8 +54,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginBottom="252dp"
         android:text="Calculate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+       />
 
     <TextView
         android:id="@+id/timeResultTextView"
@@ -70,8 +63,7 @@
         android:layout_marginStart="184dp"
         android:layout_marginBottom="244dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         tools:text="20 minutes" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

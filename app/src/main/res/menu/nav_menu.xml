@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/timeId"
+        android:title="Time"
+        android:icon="@drawable/time_icon" />
+    <item android:id="@+id/paceId"
+        android:title="Pace"
+        android:icon="@drawable/run_icon" />
+    <item android:id="@+id/helpId"
+        android:title="Help"
+        android:icon="@drawable/help_icon" />
+</menu>

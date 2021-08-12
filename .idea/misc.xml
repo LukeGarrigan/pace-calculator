@@ -4,9 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/drawable/run_icon.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/calculate_pace.xml" value="0.26268115942028986" />
         <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/calculate_time.xml" value="0.25" />
+        <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/fragment_pace.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/fragment_pace2.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/fragment_time.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/layout/pace.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/lukeg/AndroidStudioProjects/pacecalc/app/src/main/res/menu/nav_menu.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>
