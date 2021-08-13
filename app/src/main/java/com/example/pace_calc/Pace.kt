@@ -10,14 +10,4 @@ class Pace(val minutes: Int, val seconds: Int) {
         }
     }
 
-    fun calculateTime(distanceEntered: Double) : String {
-        val totalSeconds = distanceEntered * this.seconds;
-        val totalMinutesInSeconds = (distanceEntered * this.minutes)*60;
-        val minutesAndSeconds = totalSeconds + totalMinutesInSeconds;
-
-        val minutesToDisplay = floor(minutesAndSeconds / 60);
-        val secondsToDisplay = minutesAndSeconds % 60;
-
-        return "${minutesToDisplay.toInt()} mins ${secondsToDisplay.toInt()} seconds";
-    }
 }

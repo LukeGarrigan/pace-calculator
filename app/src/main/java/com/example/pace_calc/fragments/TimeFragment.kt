@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.pace_calc.Calculator
 import com.example.pace_calc.Pace
 import com.example.pace_calc.R
 
@@ -51,6 +52,7 @@ class TimeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var pace = Pace(8, 10)
+        var calculator = Calculator()
         val enterDistance: EditText = view.findViewById(R.id.editDistance);
         enterDistance.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -92,7 +94,7 @@ class TimeFragment : Fragment() {
         calculateButton.setOnClickListener {
             val resultField: TextView = view.findViewById(R.id.timeResultTextView);
             val distanceEntered = enterDistance.text.toString().toDouble();
-            val timeToRun = pace.calculateTime(distanceEntered);
+            val timeToRun = calculator.calculateTime(pace, distanceEntered);
             resultField.text = timeToRun;
         }
 
