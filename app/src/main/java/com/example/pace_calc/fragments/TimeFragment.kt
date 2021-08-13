@@ -36,22 +36,35 @@ class TimeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_time, container, false)
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         var pace = Pace(8, 10)
-        val enterDistance: EditText = findViewById(R.id.editDistance);
+        val enterDistance: EditText = view.findViewById(R.id.editDistance);
         enterDistance.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 try {
                     v.text.toString().toDouble();
                 } catch (e: Exception) {
-                    Toast.makeText(this@MainActivity, "Distance must be a number!", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@MainActivity, "Distance must be a number!", Toast.LENGTH_SHORT).show()
                 }
                 return@OnEditorActionListener true
             }
             false
         })
 
-        val editPace: EditText = findViewById(R.id.editPaceTime);
+        val editPace: EditText = view.findViewById(R.id.editPaceTime);
 
         editPace.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}
@@ -68,32 +81,22 @@ class TimeFragment : Fragment() {
                     val seconds = Integer.parseInt(hoursMinutesSeconds[1]);
                     pace = Pace( minutes, seconds);
                 } catch (e: Exception) {
-                    Toast.makeText(this, "Must be a valid time in format hh:mm:ss", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Must be a valid time in format hh:mm:ss", Toast.LENGTH_SHORT).show()
                 }
             }
         })
 
 
-        val calculateButton: Button = findViewById(R.id.calculate);
+        val calculateButton: Button = view.findViewById(R.id.calculate);
 
         calculateButton.setOnClickListener {
-            val resultField: TextView = findViewById(R.id.timeResultTextView);
+            val resultField: TextView = view.findViewById(R.id.timeResultTextView);
             val distanceEntered = enterDistance.text.toString().toDouble();
             val timeToRun = pace.calculateTime(distanceEntered);
             resultField.text = timeToRun;
         }
 
-
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_time, container, false)
-    }
-
 
     companion object {
         /**
