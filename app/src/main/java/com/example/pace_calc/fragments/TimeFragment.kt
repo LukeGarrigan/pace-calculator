@@ -52,7 +52,7 @@ class TimeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var pace = Pace(8, 10)
-        var calculator = Calculator()
+        val calculator = Calculator()
         val enterDistance: EditText = view.findViewById(R.id.editDistance);
         enterDistance.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -66,7 +66,7 @@ class TimeFragment : Fragment() {
             false
         })
 
-        val editPace: EditText = view.findViewById(R.id.editPaceTime);
+        val editPace: EditText = view.findViewById(R.id.editTime);
 
         editPace.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}

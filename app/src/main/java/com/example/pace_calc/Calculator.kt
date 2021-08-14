@@ -12,4 +12,13 @@ class Calculator {
 
         return "${minutesToDisplay.toInt()} mins ${secondsToDisplay.toInt()} seconds";
     }
+
+    fun calculatePace(distanceEntered: Double, time: Time) : String
+    {
+        val seconds = time.asSeconds();
+        val secondsForOneMile = seconds / distanceEntered;
+
+        return time.prettyPrintSeconds(secondsForOneMile);
+
+    }
 }

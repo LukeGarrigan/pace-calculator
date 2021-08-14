@@ -5,14 +5,27 @@
     android:layout_height="match_parent"
     tools:context=".fragments.TimeFragment">
 
+    <EditText
+        android:id="@+id/editTime"
+        android:layout_width="111dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="208dp"
+        android:layout_marginBottom="298dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="08:10"
+        tools:text="08:10" />
+
     <TextView
         android:id="@+id/paceTextView"
         android:layout_width="110dp"
-        android:layout_height="37dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="63dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginBottom="299dp"
         android:text="Pace "
         android:textSize="24sp" />
 
@@ -22,25 +35,34 @@
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="208dp"
-        android:layout_marginBottom="408dp"
+        android:layout_marginStart="209dp"
+        android:layout_marginBottom="373dp"
 
         android:ems="10"
         android:inputType="textPersonName"
         android:text="5" />
 
-    <EditText
-        android:id="@+id/editPaceTime"
-        android:layout_width="111dp"
-        android:layout_height="48dp"
+    <TextView
+        android:id="@+id/timeResultTextView"
+        android:layout_width="194dp"
+        android:layout_height="45dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="208dp"
-        android:layout_marginBottom="325dp"
-        android:ems="10"
-        android:inputType="time"
-        android:text="08:10"
-        tools:text="08:10" />
+        android:layout_marginBottom="207dp"
+        android:textSize="16sp"
+        tools:text="20 minutes" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginBottom="375dp"
+        android:text="Distance"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/calculate"
@@ -49,30 +71,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="60dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="216dp"
         android:text="Calculate" />
-
-    <TextView
-        android:id="@+id/timeResultTextView"
-        android:layout_width="194dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="212dp"
-        android:layout_marginBottom="240dp"
-        android:textSize="16sp"
-        tools:text="20 minutes" />
-
-    <TextView
-        android:id="@+id/distanceTextView"
-        android:layout_width="110dp"
-        android:layout_height="37dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginBottom="417dp"
-        android:text="Distance"
-        android:textSize="24sp" />
 
 
 </RelativeLayout>
