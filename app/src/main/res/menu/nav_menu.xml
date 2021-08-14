@@ -8,6 +8,6 @@
         android:title="Pace"
         android:icon="@drawable/run_icon" />
     <item android:id="@+id/helpId"
-        android:title="Help"
-        android:icon="@drawable/help_icon" />
+        android:title="Settings"
+        android:icon="@drawable/settings_icon" />
 </menu>
