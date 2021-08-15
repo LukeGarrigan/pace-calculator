@@ -1,5 +1,6 @@
 package com.example.pace_calc
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -13,10 +14,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 
+        val preferences = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+
+        with (preferences.edit()) {
+            putString("metric", "miles")
+            apply()
+        }
+
+        var metricOut = preferences.getString("metric", "miles");
+
         val timeFragment = TimeFragment();
         val paceFragment = PaceFragment();
         val settingsFragment = SettingsFragment();
         makeCurrentFragment(timeFragment);
+
 
 
 

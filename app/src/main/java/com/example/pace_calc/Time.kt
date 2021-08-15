@@ -10,7 +10,6 @@ class Time(val hours: Int, val minutes: Int, val seconds: Int) {
         }
     }
 
-
     fun asSeconds() : Int {
         var total = 0;
         total += seconds;
